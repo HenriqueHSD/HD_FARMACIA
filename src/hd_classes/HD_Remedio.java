@@ -17,36 +17,36 @@ public class HD_Remedio {
     protected String HD_R_Tipo;
     protected double HD_R_Valor;
 //set e get                    
-public void setNome(String HD_R_Nome){
-        this.HD_R_Nome = HD_R_Nome;
-    }       public String getNome(){
+    public void setNome(String HD_R_Nome){
+    this.HD_R_Nome = HD_R_Nome;
+        }       public String getNome(){
                 return this.HD_R_Nome;
-        }
+            }
 
-    
-public void setVencimento(int HD_R_Vencimento){
-        this.HD_R_Vencimento = HD_R_Vencimento;
-    }       public int getVencimento(){
+
+    public void setVencimento(int HD_R_Vencimento){
+    this.HD_R_Vencimento = HD_R_Vencimento;
+        }       public int getVencimento(){
                 return this.HD_R_Vencimento;
-        }
+            }
 
-public void setQuantidade(int HD_R_Quantidade){
-        this.HD_R_Quantidade = HD_R_Quantidade;
-    }       public int getQuantidade(){
+    public void setQuantidade(int HD_R_Quantidade){
+    this.HD_R_Quantidade = HD_R_Quantidade;
+        }       public int getQuantidade(){
                 return this.HD_R_Quantidade;
-        }
+            }
 
-public void setTipo(String HD_R_Tipo){
-        this.HD_R_Tipo = HD_R_Tipo;
-    }       public String getTipo(){
+    public void setTipo(String HD_R_Tipo){
+    this.HD_R_Tipo = HD_R_Tipo;
+        }       public String getTipo(){
                 return this.HD_R_Tipo;
-        }
-    
-public void setValor(double HD_R_Valor){
-        this.HD_R_Valor = HD_R_Valor;
-    }       public double getValor(){
+            }
+
+    public void setValor(double HD_R_Valor){
+    this.HD_R_Valor = HD_R_Valor;
+        }       public double getValor(){
                 return this.HD_R_Valor;
-        }
+            }
 
 public HD_Remedio(String HD_R_N, int HD_R_Ve, int HD_R_Q, String HD_R_T, double HD_R_Va){
     this.HD_R_Nome = HD_R_N;

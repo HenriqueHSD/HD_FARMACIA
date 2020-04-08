@@ -19,41 +19,41 @@ public class HD_Consulta {
     protected double HD_CO_Altura;
                             
 //set e get
-public void setNome(String HD_CO_Nome){
-this.HD_CO_Nome = HD_CO_Nome;
-    }       public String getNome(){
-            return this.HD_CO_Nome;
-        }
+    public void setNome(String HD_CO_Nome){
+    this.HD_CO_Nome = HD_CO_Nome;
+        }       public String getNome(){
+                return this.HD_CO_Nome;
+            }
 
-public void setIdade(int HD_CO_Idade){
-this.HD_CO_Idade = HD_CO_Idade;
-    }       public int getIdade(){
-            return this.HD_CO_Idade;
-        }
+    public void setIdade(int HD_CO_Idade){
+    this.HD_CO_Idade = HD_CO_Idade;
+        }       public int getIdade(){
+                return this.HD_CO_Idade;
+            }
 
-public void setPressao(double HD_CO_Pressao){
-this.HD_CO_Pressao = HD_CO_Pressao;
-    }       public double getPressao(){
-            return this.HD_CO_Pressao;
-        }
+    public void setPressao(double HD_CO_Pressao){
+    this.HD_CO_Pressao = HD_CO_Pressao;
+        }       public double getPressao(){
+                return this.HD_CO_Pressao;
+            }
 
-public void setSexo(String HD_CO_Sexo){
-this.HD_CO_Sexo = HD_CO_Sexo;
-    }       public String getSexo(){
-            return this.HD_CO_Sexo;
-        }    
-    
-public void setPeso(double HD_CO_Peso){
-this.HD_CO_Peso = HD_CO_Peso;
-    }       public double getPeso(){
-            return this.HD_CO_Peso;
-        }
-    
-public void setAltura(double HD_CO_Altura){
-this.HD_CO_Altura = HD_CO_Altura;
-    }       public double getAltura(){
-            return this.HD_CO_Altura;
-        }    
+    public void setSexo(String HD_CO_Sexo){
+    this.HD_CO_Sexo = HD_CO_Sexo;
+        }       public String getSexo(){
+                return this.HD_CO_Sexo;
+            }    
+
+    public void setPeso(double HD_CO_Peso){
+    this.HD_CO_Peso = HD_CO_Peso;
+        }       public double getPeso(){
+                return this.HD_CO_Peso;
+            }
+
+    public void setAltura(double HD_CO_Altura){
+    this.HD_CO_Altura = HD_CO_Altura;
+        }       public double getAltura(){
+                return this.HD_CO_Altura;
+            }    
 
 public HD_Consulta(String HD_CO_N, int HD_CO_I, double HD_CO_Pr, String HD_CO_S, double HD_CO_Pe, double HD_CO_A){
     this.HD_CO_Nome = HD_CO_N;

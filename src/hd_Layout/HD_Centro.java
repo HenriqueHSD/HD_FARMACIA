@@ -18,7 +18,7 @@ import javax.swing.JPanel;
  */
 public class HD_Centro extends JPanel {
     public HD_Centro(){
-       add(new HD_Form_Cliente());
+    add(new HD_Form_Cliente());
 
     }
     

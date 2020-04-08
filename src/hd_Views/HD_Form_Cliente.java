@@ -62,7 +62,7 @@ public HD_Form_Cliente(){
     public void actionPerformed(ActionEvent e) {
     
     String Valor_nome = nome.getText();
-    int Valor_cpf = Integer.parseInt(cpf.getText());
+    String Valor_cpf = cpf.getText();
     int Valor_telefone = Integer.parseInt( telefone.getText());
     String Valor_endereco = endereco.getText();
     String Valor_email = email.getText();

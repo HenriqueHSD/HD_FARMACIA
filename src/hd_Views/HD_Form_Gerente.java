@@ -75,7 +75,7 @@ public HD_Form_Gerente(){
     
     String Valor_nome = nome.getText();
     int Valor_idade = Integer.parseInt(idade.getText());
-    int Valor_cpf = Integer.parseInt(cpf.getText());
+    String Valor_cpf = cpf.getText();
     String Valor_endereco = endereco.getText();
     double Valor_salario = Double.parseDouble(salario.getText());
     String Valor_usuario = usuario.getText();
