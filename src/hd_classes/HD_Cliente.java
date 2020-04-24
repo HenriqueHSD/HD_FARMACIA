@@ -16,6 +16,12 @@ public class HD_Cliente {
     protected int HD_C_Telefone;
     protected String HD_C_Endereco;
     protected String HD_C_Email;
+
+    public HD_Cliente() {
+        
+    }
+
+    
 //set e get
     public void setNome(String HD_C_Nome){
     this.HD_C_Nome = HD_C_Nome;
@@ -47,7 +53,7 @@ public class HD_Cliente {
                 return this.HD_C_Email;
             }    
     
-   public HD_Cliente(String HD_C_N, String HD_C_C, int HD_C_T, String HD_C_En, String HD_C_Em){
+   public HD_Cliente (String HD_C_N, String HD_C_C, int HD_C_T, String HD_C_En, String HD_C_Em){
         this.HD_C_Nome = HD_C_N;
         this.HD_C_CPF = HD_C_C;
         this.HD_C_Telefone = HD_C_T;

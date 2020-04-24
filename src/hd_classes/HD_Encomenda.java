@@ -17,6 +17,10 @@ public class HD_Encomenda {
     protected int HD_E_Telefone;               
     protected String HD_E_Composicao;
     protected double HD_E_Valor;
+
+    public HD_Encomenda() {
+        
+    }
 //set e get
     public void setNome(String HD_E_NomeC){
     this.HD_E_NomeC = HD_E_NomeC;

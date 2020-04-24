@@ -5,12 +5,13 @@
  */
 package hd_Views;
 
+import DAO.ClienteDAO;
 import hd_classes.HD_Cliente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane; uma pequena tela
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -67,16 +68,14 @@ public HD_Form_Cliente(){
     String Valor_endereco = endereco.getText();
     String Valor_email = email.getText();
     
-    HD_Cliente cliente = new HD_Cliente(Valor_nome, Valor_cpf, Valor_telefone, Valor_endereco, Valor_email); 
+    HD_Cliente c = new HD_Cliente();
+    c.setNome(Valor_nome);
+    c.setCPF(Valor_cpf);
+    c.setTelefone(Valor_telefone);
+    c.setEndereco(Valor_endereco);
+    c.setEmail(Valor_email);
     
-    String texto = "nome digitado é:"+cliente.getNome()+
-    "\n cpf digitado é:"+cliente.getCPF()+
-    "\n telefone digitado é:"+cliente.getTelefone()+
-    "\n endereço digitado é:"+cliente.getEndereco()+
-    "\n email digitado é:"+cliente.getEmail();
-     
-    
-    JOptionPane.showMessageDialog(null, texto);
+    ClienteDAO.adicionar(c);
     
     }
         

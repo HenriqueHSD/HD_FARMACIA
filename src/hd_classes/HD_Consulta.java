@@ -17,6 +17,10 @@ public class HD_Consulta {
     protected String HD_CO_Sexo;
     protected double HD_CO_Peso;
     protected double HD_CO_Altura;
+
+    public HD_Consulta() {
+        
+    }
                             
 //set e get
     public void setNome(String HD_CO_Nome){

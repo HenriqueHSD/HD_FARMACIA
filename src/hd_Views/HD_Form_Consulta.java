@@ -5,6 +5,7 @@
  */
 package hd_Views;
 
+import DAO.ConsultaDAO;
 import hd_classes.HD_Consulta;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -78,16 +79,14 @@ public HD_Form_Consulta(){
     double Valor_peso = Double.parseDouble(peso.getText());
     double Valor_altura = Double.parseDouble(altura.getText());
     
-    HD_Consulta consulta = new HD_Consulta(Valor_nome, Valor_idade, Valor_pressao, Valor_sexo, Valor_peso, Valor_altura);
+    HD_Consulta co = new HD_Consulta();
+    co.setNome(Valor_nome);
+    co.setIdade(Valor_idade);
+    co.setPressao(Valor_pressao);
+    co.setSexo(Valor_sexo);
+    co.setPeso(Valor_peso);
+    co.setAltura(Valor_altura);
     
-    String texto = "nome digitado é:"+consulta.getNome()+
-    "\n idade digitado é:"+consulta.getIdade()+
-    "\n pressao digitado é:"+consulta.getPressao()+
-    "\n sexo digitado é:"+consulta.getSexo()+
-    "\n peso digitado é:"+consulta.getPeso()+
-     "\n altura digitado é:"+consulta.getAltura();
-    
-    JOptionPane.showMessageDialog(null, texto);
-    
+    ConsultaDAO.adicionar(co);
     }
 }

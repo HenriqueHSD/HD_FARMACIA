@@ -6,6 +6,7 @@
 package hd_Views;
 
 
+import DAO.RemedioDAO;
 import hd_classes.HD_Remedio;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -32,7 +33,7 @@ public class HD_Form_Remedio extends JPanel implements ActionListener{
         nome = new JTextField(10);
         add(nome);
         
-        JLabel label_vencimento = new JLabel("Valor : ");
+        JLabel label_vencimento = new JLabel("Vencimento : ");
         add(label_vencimento);        
         vencimento = new JTextField(10); 
         add(vencimento);
@@ -70,18 +71,14 @@ public class HD_Form_Remedio extends JPanel implements ActionListener{
     String Valor_tipo = tipo.getText();
     double Valor_valor = Double.parseDouble(valor.getText());
     
-    HD_Remedio remedio = new HD_Remedio(Valor_nome, Valor_vencimento, Valor_quantidade, Valor_tipo, Valor_valor);
+    HD_Remedio re = new HD_Remedio();
+    re.setNome(Valor_nome);
+    re.setVencimento(Valor_vencimento);
+    re.setQuantidade(Valor_quantidade);
+    re.setTipo(Valor_tipo);
+    re.setValor(Valor_valor);
     
-    String texto = "nome digitado é:"+remedio.getNome()+
-    "\nvencimento digitado é:"+remedio.getVencimento()+
-    "\nquantidade digitado é:"+remedio.getQuantidade()+
-    "\ntipo digitado é:"+remedio.getTipo()+
-    "\nvalor digitado é:"+remedio.getValor();
-    
-    JOptionPane.showMessageDialog(null, texto);
-    
-    
-    
+    RemedioDAO.adicionar(re);
     }
 
     

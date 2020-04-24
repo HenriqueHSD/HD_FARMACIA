@@ -16,6 +16,10 @@ public class HD_Remedio {
     protected int HD_R_Quantidade;
     protected String HD_R_Tipo;
     protected double HD_R_Valor;
+
+    public HD_Remedio() {
+        
+    }
 //set e get                    
     public void setNome(String HD_R_Nome){
     this.HD_R_Nome = HD_R_Nome;

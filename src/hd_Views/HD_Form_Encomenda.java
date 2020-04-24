@@ -5,6 +5,7 @@
  */
 package hd_Views;
 
+import DAO.EncomendaDAO;
 import hd_classes.HD_Encomenda;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -78,16 +79,14 @@ public HD_Form_Encomenda(){
     String Valor_composicao = composicao.getText();
     double Valor_valor = Double.parseDouble(valor.getText());
     
-    HD_Encomenda encomenda = new HD_Encomenda(Valor_nomec, Valor_nomer, Valor_endereco, Valor_telefone, Valor_composicao, Valor_valor);
+    HD_Encomenda en = new HD_Encomenda();
+    en.setNome(Valor_nomec);
+    en.setNomeR(Valor_nomer);
+    en.setEndereco(Valor_endereco);
+    en.setTelefone(Valor_telefone);
+    en.setComposicao(Valor_composicao);
+    en.setValor(Valor_valor);
     
-    String texto = "nome do cliente digitado é:"+encomenda.getNome()+
-    "\nnome do remedio digitado é:"+encomenda.getNomeR()+
-    "\nendereço digitado é:"+encomenda.getEndereco()+
-    "\ntelefone digitado é:"+encomenda.getTelefone()+
-    "\ncomposição digitado é:"+encomenda.getComposicao()+
-    "\nvalor digitado é:"+encomenda.getValor();
-    
-    JOptionPane.showMessageDialog(null, texto);
-    
+    EncomendaDAO.adicionar(en);
     }
 }
