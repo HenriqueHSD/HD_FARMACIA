@@ -6,7 +6,7 @@
 package hd_Views;
 
 import DAO.ConsultaDAO;
-import hd_classes.HD_Consulta;
+import hd_bean.HD_Consulta;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;

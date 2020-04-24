@@ -6,7 +6,7 @@
 package hd_Views;
 
 import DAO.EncomendaDAO;
-import hd_classes.HD_Encomenda;
+import hd_bean.HD_Encomenda;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;

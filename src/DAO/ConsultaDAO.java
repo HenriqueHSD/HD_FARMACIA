@@ -6,7 +6,7 @@
 package DAO;
 
 
-import hd_classes.HD_Consulta;
+import hd_bean.HD_Consulta;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -15,6 +15,9 @@ import java.sql.PreparedStatement;
  * @author Henrique
  */
 public class ConsultaDAO {
+    public void lista(){}
+public void atualizar(){}
+public void excluir(){}
     public static void adicionar(HD_Consulta co){
      String sql = "INSERT INTO consulta (nome, idade, pressao, sexo, peso, altura) VALUES (?,?,?,?,?,?)";
      Connection conexao = null;

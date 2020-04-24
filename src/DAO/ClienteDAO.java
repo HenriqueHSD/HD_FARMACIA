@@ -6,7 +6,7 @@
 package DAO;
 
 
-import hd_classes.HD_Cliente;
+import hd_bean.HD_Cliente;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -15,7 +15,10 @@ import java.sql.PreparedStatement;
  * @author Henrique
  */
 public class ClienteDAO {
- public static void adicionar(HD_Cliente c){
+public void lista(){}
+public void atualizar(){}
+public void excluir(){}
+public static void adicionar(HD_Cliente c){
      String sql = "INSERT INTO cliente (nome, cpf, telefone, endereco, email) VALUES (?,?,?,?,?)";
      Connection conexao = null;
      PreparedStatement stmt = null;

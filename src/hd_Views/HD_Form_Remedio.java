@@ -7,7 +7,7 @@ package hd_Views;
 
 
 import DAO.RemedioDAO;
-import hd_classes.HD_Remedio;
+import hd_bean.HD_Remedio;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;

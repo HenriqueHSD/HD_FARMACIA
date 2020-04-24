@@ -5,7 +5,7 @@
  */
 package DAO;
 
-import hd_classes.HD_Remedio;
+import hd_bean.HD_Remedio;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
@@ -14,6 +14,9 @@ import java.sql.PreparedStatement;
  * @author Henrique
  */
 public class RemedioDAO {
+    public void lista(){}
+public void atualizar(){}
+public void excluir(){}
     public static void adicionar(HD_Remedio re){
      String sql = "INSERT INTO remedio (nome, vencimento, quantidade, tipo, valor) VALUES (?,?,?,?,?)";
      Connection conexao = null;

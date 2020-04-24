@@ -13,11 +13,15 @@ import javax.swing.JFrame;
  * @author 201816882
  */
 public class HD_Janela extends JFrame {
+    public static HD_Centro centro = new HD_Centro();
     public HD_Janela(){
         super("Redde Minus");
         setLayout(new BorderLayout());
         getContentPane().add(new HD_Topo(), BorderLayout.NORTH);
-        getContentPane().add(new HD_Centro(), BorderLayout.CENTER);
+        getContentPane().add(centro, BorderLayout.CENTER);
+        getContentPane().add(new HD_Rodape(), BorderLayout.SOUTH);
+        getContentPane().add(new HD_Esquerda(), BorderLayout.EAST);
+        getContentPane().add(new HD_Direita(), BorderLayout.WEST);
         pack();
         show();
   

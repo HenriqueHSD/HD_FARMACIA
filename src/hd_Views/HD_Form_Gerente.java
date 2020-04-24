@@ -5,7 +5,7 @@
  */
 package hd_Views;
 
-import hd_classes.HD_Gerente;
+import hd_bean.HD_Gerente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;

@@ -6,7 +6,15 @@
 package hd_Layout;
 
 
+import static hd_Layout.HD_Janela.centro;
+import hd_Views.HD_Form_Cliente;
+import hd_Views.HD_Form_Consulta;
+import hd_Views.HD_Form_Encomenda;
+import hd_Views.HD_Form_Gerente;
+import hd_Views.HD_Form_Remedio;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -23,6 +31,52 @@ public class HD_Topo extends JPanel{
         JButton butao3 = new JButton("Encomenda Cosmetico");
         JButton butao4 = new JButton("Remedio");
         JButton butao5 = new JButton("Gerente");
+        
+        butao1.addActionListener(new ActionListener(){
+          @Override
+          public void actionPerformed(ActionEvent arg0) {
+          centro.removeAll(); 
+          centro.add(new HD_Form_Cliente());
+          centro.repaint();
+          centro.validate();
+          }
+      });
+        butao2.addActionListener(new ActionListener(){
+          @Override
+          public void actionPerformed(ActionEvent arg0) {
+          centro.removeAll(); 
+          centro.add(new HD_Form_Consulta());
+          centro.repaint();
+          centro.validate();
+          }
+      });
+        butao3.addActionListener(new ActionListener(){
+          @Override
+          public void actionPerformed(ActionEvent arg0) {
+          centro.removeAll(); 
+          centro.add(new HD_Form_Encomenda());
+          centro.repaint();
+          centro.validate();
+          }
+      });
+        butao4.addActionListener(new ActionListener(){
+          @Override
+          public void actionPerformed(ActionEvent arg0) {
+          centro.removeAll(); 
+          centro.add(new HD_Form_Remedio());
+          centro.repaint();
+          centro.validate();
+          }
+      });
+        butao5.addActionListener(new ActionListener(){
+          @Override
+          public void actionPerformed(ActionEvent arg0) {
+          centro.removeAll(); 
+          centro.add(new HD_Form_Gerente());
+          centro.repaint();
+          centro.validate();
+          }
+      });
         
         add(butao1);
         add(butao2);
