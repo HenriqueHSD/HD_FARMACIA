@@ -7,11 +7,11 @@ package hd_Layout;
 
 
 import static hd_Layout.HD_Janela.centro;
-import hd_Views.HD_Form_Cliente;
-import hd_Views.HD_Form_Consulta;
-import hd_Views.HD_Form_Encomenda;
 import hd_Views.HD_Form_Gerente;
-import hd_Views.HD_Form_Remedio;
+import hd_Views.listaCliente;
+import hd_Views.listaConsulta;
+import hd_Views.listaEncomenda;
+import hd_Views.listaRemedio;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,7 +36,7 @@ public class HD_Topo extends JPanel{
           @Override
           public void actionPerformed(ActionEvent arg0) {
           centro.removeAll(); 
-          centro.add(new HD_Form_Cliente());
+          centro.add(new listaCliente());
           centro.repaint();
           centro.validate();
           }
@@ -45,7 +45,7 @@ public class HD_Topo extends JPanel{
           @Override
           public void actionPerformed(ActionEvent arg0) {
           centro.removeAll(); 
-          centro.add(new HD_Form_Consulta());
+          centro.add(new listaConsulta());
           centro.repaint();
           centro.validate();
           }
@@ -54,7 +54,7 @@ public class HD_Topo extends JPanel{
           @Override
           public void actionPerformed(ActionEvent arg0) {
           centro.removeAll(); 
-          centro.add(new HD_Form_Encomenda());
+          centro.add(new listaEncomenda());
           centro.repaint();
           centro.validate();
           }
@@ -63,7 +63,7 @@ public class HD_Topo extends JPanel{
           @Override
           public void actionPerformed(ActionEvent arg0) {
           centro.removeAll(); 
-          centro.add(new HD_Form_Remedio());
+          centro.add(new listaRemedio());
           centro.repaint();
           centro.validate();
           }

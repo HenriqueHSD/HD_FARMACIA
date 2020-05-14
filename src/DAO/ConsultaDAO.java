@@ -9,13 +9,44 @@ package DAO;
 import hd_bean.HD_Consulta;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  *
  * @author Henrique
  */
 public class ConsultaDAO {
-    public void lista(){}
+    public static ArrayList<HD_Consulta> listar(){
+    
+    ArrayList<HD_Consulta> co = new ArrayList<>();
+    
+    String sql = "SELECT * FROM consulta";
+    
+    try{
+     Connection conexao = ConexaoBD.retornaConexao(); 
+     PreparedStatement stmt = conexao.prepareStatement(sql);
+     
+     ResultSet registro = stmt.executeQuery(sql);
+     
+     while(registro.next()){
+         HD_Consulta temporario = new HD_Consulta();
+         temporario.setNome(registro.getString("Nome"));
+         temporario.setIdade(registro.getInt("Idade"));
+         temporario.setPressao(registro.getDouble("Pressao"));
+         temporario.setSexo(registro.getString("Sexo"));
+         temporario.setPeso(registro.getDouble("Peso"));
+         temporario.setAltura(registro.getDouble("Altura"));
+         
+         co.add(temporario);
+     }
+     return co;
+    }catch(Exception e){
+        System.err.println("Erro na Listagem de Consulta"+e.toString());
+    }
+    
+    return null;
+}
 public void atualizar(){}
 public void excluir(){}
     public static void adicionar(HD_Consulta co){

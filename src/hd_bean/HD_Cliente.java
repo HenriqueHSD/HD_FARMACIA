@@ -5,6 +5,9 @@
  */
 package hd_bean;
 
+import DAO.ClienteDAO;
+import java.util.ArrayList;
+
 /**
  *
  * @author Henrique
@@ -18,6 +21,10 @@ public class HD_Cliente {
     protected String HD_C_Email;
 
     public HD_Cliente() {
+    }
+
+    public ArrayList<HD_Cliente> listar(){
+        return ClienteDAO.listar();
         
     }
 

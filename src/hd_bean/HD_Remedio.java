@@ -5,6 +5,9 @@
  */
 package hd_bean;
 
+import DAO.RemedioDAO;
+import java.util.ArrayList;
+
 /**
  *
  * @author Henrique
@@ -18,6 +21,10 @@ public class HD_Remedio {
     protected double HD_R_Valor;
 
     public HD_Remedio() {
+        
+    }
+    public ArrayList<HD_Remedio> listar(){
+        return RemedioDAO.listar();
         
     }
 //set e get                    

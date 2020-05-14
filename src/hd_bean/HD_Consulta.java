@@ -5,6 +5,9 @@
  */
 package hd_bean;
 
+import DAO.ConsultaDAO;
+import java.util.ArrayList;
+
 /**
  *
  * @author Henrique
@@ -20,6 +23,10 @@ public class HD_Consulta {
 
     public HD_Consulta() {
         
+    }
+
+    public ArrayList<HD_Consulta> listar() {
+       return ConsultaDAO.listar(); 
     }
                             
 //set e get

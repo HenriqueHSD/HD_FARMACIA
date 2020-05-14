@@ -9,13 +9,43 @@ package DAO;
 import hd_bean.HD_Cliente;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  *
  * @author Henrique
  */
 public class ClienteDAO {
-public void lista(){}
+public static ArrayList<HD_Cliente> listar(){
+    
+    ArrayList<HD_Cliente> c = new ArrayList<>();
+    
+    String sql = "SELECT * FROM cliente";
+    
+    try{
+     Connection conexao = ConexaoBD.retornaConexao(); 
+     PreparedStatement stmt = conexao.prepareStatement(sql);
+     
+     ResultSet registro = stmt.executeQuery(sql);
+     
+     while(registro.next()){
+         HD_Cliente temporario = new HD_Cliente();
+         temporario.setNome(registro.getString("Nome"));
+         temporario.setCPF(registro.getString("CPF"));
+         temporario.setTelefone(registro.getInt("Telefone"));
+         temporario.setEndereco(registro.getString("Endereco"));
+         temporario.setEmail(registro.getString("Email"));
+         
+         c.add(temporario);
+     }
+     return c;
+    }catch(Exception e){
+        System.err.println("Erro na Listagem de Cliente"+e.toString());
+    }
+    
+    return null;
+}
 public void atualizar(){}
 public void excluir(){}
 public static void adicionar(HD_Cliente c){

@@ -5,6 +5,9 @@
  */
 package hd_bean;
 
+import DAO.EncomendaDAO;
+import java.util.ArrayList;
+
 /**
  *
  * @author Henrique
@@ -19,6 +22,11 @@ public class HD_Encomenda {
     protected double HD_E_Valor;
 
     public HD_Encomenda() {
+        
+    }
+    
+    public ArrayList<HD_Encomenda> listar(){
+        return EncomendaDAO.listar();
         
     }
 //set e get

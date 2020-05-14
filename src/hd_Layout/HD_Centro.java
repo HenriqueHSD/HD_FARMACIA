@@ -10,6 +10,7 @@ import hd_Views.HD_Form_Consulta;
 import hd_Views.HD_Form_Encomenda;
 import hd_Views.HD_Form_Gerente;
 import hd_Views.HD_Form_Remedio;
+import hd_Views.listaCliente;
 import javax.swing.JPanel;
 
 /**
@@ -18,7 +19,7 @@ import javax.swing.JPanel;
  */
 public class HD_Centro extends JPanel {
     public HD_Centro(){
-    add(new HD_Form_Remedio());
+    add(new listaCliente());
 
     }
     
