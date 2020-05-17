@@ -7,10 +7,11 @@ package hd_Layout;
 
 
 import static hd_Layout.HD_Janela.centro;
-import hd_Views.HD_Form_Gerente;
+
 import hd_Views.listaCliente;
 import hd_Views.listaConsulta;
 import hd_Views.listaEncomenda;
+import hd_Views.listaGerente;
 import hd_Views.listaRemedio;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -72,7 +73,7 @@ public class HD_Topo extends JPanel{
           @Override
           public void actionPerformed(ActionEvent arg0) {
           centro.removeAll(); 
-          centro.add(new HD_Form_Gerente());
+          centro.add(new listaGerente());
           centro.repaint();
           centro.validate();
           }

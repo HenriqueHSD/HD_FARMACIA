@@ -5,9 +5,9 @@
  */
 package hd_Views;
 
-import DAO.RemedioDAO;
+import DAO.GerenteDAO;
 import static hd_Layout.HD_Janela.centro;
-import hd_bean.HD_Remedio;
+import hd_bean.HD_Gerente;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -20,16 +20,16 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Henrique
  */
-public class listaRemedio extends JPanel{
+public class listaGerente extends JPanel{
     private JButton botaoAdicionar, botaoEditar, botaoExcluir;
     
     private JTable tabela;
-    private String[]colunas = {"NOME", "VENCIMENTO", "QUANTIDADE", "TIPO", "VALOR"};
+    private String[]colunas = {"USUARIO", "SENHA"};
     private Object[][] dados;
     
     DefaultTableModel modelo = new DefaultTableModel(dados, colunas);
     
-    public listaRemedio(){
+    public listaGerente(){
         botaoAdicionar = new JButton("Adicionar");
         botaoEditar = new JButton("Editar");
         botaoExcluir = new JButton("Excluir");
@@ -40,16 +40,13 @@ public class listaRemedio extends JPanel{
         
         tabela = new JTable(modelo);
         
-        ArrayList<HD_Remedio> re = RemedioDAO.listar();
+        ArrayList<HD_Gerente> ge = GerenteDAO.listar();
         
-        for(HD_Remedio remedio: re){ 
-            String nome = remedio.getNome();
-            String ven = remedio.getVencimento();
-            String qua = Integer.toString(remedio.getQuantidade());
-            String ti = remedio.getTipo();
-            String vl = Double.toString(remedio.getValor());
+        for(HD_Gerente gerente: ge){ 
+            String usu = gerente.getUsuario();
+            String sen = gerente.getSenha();
             
-            String[] linha = new String[]{nome,ven,qua,ti,vl};
+            String[] linha = new String[]{usu,sen};
             
             modelo.addRow(linha);
         }
@@ -63,7 +60,7 @@ public class listaRemedio extends JPanel{
         @Override
         public void actionPerformed(ActionEvent e) {
             centro.removeAll();
-            centro.add(new HD_Form_Remedio());   
+            centro.add(new HD_Form_Gerente());   
             centro.repaint();                 
             centro.validate();
         }

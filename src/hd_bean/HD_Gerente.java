@@ -5,41 +5,45 @@
  */
 package hd_bean;
 
+import DAO.GerenteDAO;
+import java.util.ArrayList;
+
 /**
  *
  * @author Henrique
  */
-public class HD_Gerente extends HD_Funcionario {
+public class HD_Gerente{ 
     //atributos
-    private String HD_G_Usuario;
-    private String HD_G_Senha;
+    protected String Usuario;
+    protected String Senha;
  //set e get       
-    public void setUsuario (String HD_G_Usuario){
-    this.HD_G_Usuario = this.HD_G_Usuario;
+
+    public HD_Gerente() {
+        
+    }
+    
+    public ArrayList<HD_Gerente> listar(){
+        return GerenteDAO.listar();
+        
+    }
+    public void setUsuario (String Usuario){
+    this.Usuario = this.Usuario;
     }       public String getUsuario(){
-            return this.HD_G_Usuario;
+            return this.Usuario;
     }
 
-    public void setSenha (String HD_G_Senha){
-    this.HD_G_Senha = this.HD_G_Senha;
+    public void setSenha (String Senha){
+    this.Senha = this.Senha;
     }       public String getSenha(){
-            return this.HD_G_Senha;
+            return this.Senha;
     }
 
-public HD_Gerente(String HD_G_N, int HD_G_I, String HD_G_C, String HD_G_E, double HD_G_Sa ,String HD_G_U, String HD_G_Se){
-    this.HD_F_Nome = HD_G_N;
-    this.HD_F_Idade = HD_G_I;
-    this.HD_F_CPF = HD_G_C;
-    this.HD_F_Endereco = HD_G_E;
-    this.HD_F_Salario = HD_G_Sa;
-    this.HD_G_Usuario = HD_G_U;
-    this.HD_G_Senha = HD_G_Se;
+public HD_Gerente(String HD_G_U, String HD_G_Se){
+    
+    this.Usuario = HD_G_U;
+    this.Senha = HD_G_Se;
 }
 
-    @Override
-    public double Taxa() {
-        return this.HD_F_Salario + (this.HD_F_Salario *(20/100));
-    }
 
 
 

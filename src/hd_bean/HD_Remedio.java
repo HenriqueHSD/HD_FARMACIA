@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class HD_Remedio {
     //atributos
     protected String HD_R_Nome;
-    protected int HD_R_Vencimento;
+    protected String HD_R_Vencimento;
     protected int HD_R_Quantidade;
     protected String HD_R_Tipo;
     protected double HD_R_Valor;
@@ -35,9 +35,9 @@ public class HD_Remedio {
             }
 
 
-    public void setVencimento(int HD_R_Vencimento){
+    public void setVencimento(String HD_R_Vencimento){
     this.HD_R_Vencimento = HD_R_Vencimento;
-        }       public int getVencimento(){
+        }       public String getVencimento(){
                 return this.HD_R_Vencimento;
             }
 
@@ -59,7 +59,7 @@ public class HD_Remedio {
                 return this.HD_R_Valor;
             }
 
-public HD_Remedio(String HD_R_N, int HD_R_Ve, int HD_R_Q, String HD_R_T, double HD_R_Va){
+public HD_Remedio(String HD_R_N, String HD_R_Ve, int HD_R_Q, String HD_R_T, double HD_R_Va){
     this.HD_R_Nome = HD_R_N;
     this.HD_R_Vencimento = HD_R_Ve;
     this.HD_R_Quantidade = HD_R_Q;

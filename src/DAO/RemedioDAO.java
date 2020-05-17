@@ -31,7 +31,7 @@ public class RemedioDAO {
      while(registro.next()){
          HD_Remedio temporario = new HD_Remedio();
          temporario.setNome(registro.getString("Nome"));
-         temporario.setVencimento(registro.getInt("Vencimento"));
+         temporario.setVencimento(registro.getString("Vencimento"));
          temporario.setQuantidade(registro.getInt("Quantidade"));
          temporario.setTipo(registro.getString("Tipo"));
          temporario.setValor(registro.getDouble("Valor"));
@@ -57,7 +57,7 @@ public void excluir(){}
          stmt = conexao.prepareStatement (sql);
          
          stmt.setString(1, re.getNome());
-         stmt.setInt(2, re.getVencimento());
+         stmt.setString(2, re.getVencimento());
          stmt.setInt(3, re.getQuantidade());
          stmt.setString(4, re.getTipo());
          stmt.setDouble(5, re.getValor());

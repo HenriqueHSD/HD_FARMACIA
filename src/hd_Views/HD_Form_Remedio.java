@@ -66,7 +66,7 @@ public class HD_Form_Remedio extends JPanel implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
      
     String Valor_nome = nome.getText();
-    int Valor_vencimento = Integer.parseInt(vencimento.getText());
+    String Valor_vencimento = vencimento.getText();
     int Valor_quantidade = Integer.parseInt(quantidade.getText());
     String Valor_tipo = tipo.getText();
     double Valor_valor = Double.parseDouble(valor.getText());
